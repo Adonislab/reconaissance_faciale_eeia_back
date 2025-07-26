@@ -23,3 +23,5 @@ def capture_and_recognize():
 
     print("🔍 Résultat:", response.json())
 
+if __name__ == "__main__":
+    capture_and_recognize()
