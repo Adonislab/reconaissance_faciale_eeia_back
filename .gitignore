@@ -1,0 +1,4 @@
+.env
+embeddings/*
+facenet_africain_finetuned.pth
+__pycache__/
