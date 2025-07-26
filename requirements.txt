@@ -8,4 +8,5 @@ Pillow
 python-multipart 
 pillow 
 numpy
-
+opencv-python
+requests
