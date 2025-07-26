@@ -47,7 +47,7 @@ async def verify_faces(file1: UploadFile = File(...), file2: UploadFile = File(.
         torch.tensor(emb2).unsqueeze(0)
     ).item()
 
-    same = sim > 0.7
+    same = sim > 0.5
     return {"similarity": sim, "match": same}
 
 @app.post("/recognize")
