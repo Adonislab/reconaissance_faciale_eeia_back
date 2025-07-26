@@ -5,3 +5,7 @@ facenet-pytorch
 opencv-python
 python-multipart
 Pillow
+python-multipart 
+pillow 
+numpy
+

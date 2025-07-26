@@ -4,12 +4,13 @@ import cv2
 import numpy as np
 from torchvision import transforms
 
+
 transform = transforms.Compose([
-    transforms.ToPILImage(),
     transforms.Resize((160, 160)),
     transforms.ToTensor(),
     transforms.Normalize([0.5], [0.5])
 ])
+
 
 def read_image_from_bytes(file_bytes):
     np_arr = np.frombuffer(file_bytes, np.uint8)
