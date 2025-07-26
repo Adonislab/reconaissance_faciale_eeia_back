@@ -71,7 +71,11 @@ async def recognize_face(file: UploadFile = File(...)):
             max_sim = sim
             best_match = name
 
+    if max_sim < 0.5:
+        return {"match": None, "message": "Je ne reconnais pas encore cette personne.", "similarity": max_sim}
+
     return {"match": best_match, "similarity": max_sim}
+
 
 @app.post("/realtime_recognize")
 async def realtime_recognize(file: UploadFile = File(...)):
@@ -98,7 +102,10 @@ async def realtime_recognize(file: UploadFile = File(...)):
                 max_sim = sim
                 best_match = name
 
+        if max_sim < 0.5:
+            return JSONResponse(content={"identity": None, "message": "Je ne reconnais pas encore cette personne.", "similarity": max_sim})
+
         return JSONResponse(content={"identity": best_match, "similarity": max_sim})
-    
+
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
