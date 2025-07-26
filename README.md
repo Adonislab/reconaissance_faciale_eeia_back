@@ -6,6 +6,8 @@
 ````markdown
 # Projet Reconnaissance Faciale Africaine avec Fine-tuning Facenet
 
+lien : https://colab.research.google.com/drive/1ZimZAEjyPZ4eMzaju7fTbuT1GTlGBnyE#scrollTo=f_hUPJtfd6k7
+
 ## Description
 
 Ce projet implémente un système de reconnaissance faciale spécialisé pour les visages africains, basé sur un modèle Facenet fine-tuné. Il inclut :
