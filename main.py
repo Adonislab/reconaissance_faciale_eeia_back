@@ -14,6 +14,11 @@ app = FastAPI()
 model = load_facenet_model()
 device = 'cuda' if torch.cuda.is_available() else 'cpu'
 
+@app.get("/")
+def read_root():
+    return {"message": "Application de reconaissance faciale"}
+
+
 @app.post("/register")
 async def register_face(name: str, file: UploadFile = File(...)):
     image_bytes = await file.read()
